@@ -1,0 +1,7 @@
+pipeline
+agent any
+stages
+{
+stage ('git clone')
+git 'https://github.com/shaileejain09/maven-project'
+}

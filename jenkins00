@@ -1,7 +1,11 @@
-pipeline
+pipeline 
+{
 agent any
 stages
 {
-stage ('git clone')
+stage ('cloning code')
+{
 git 'https://github.com/shaileejain09/maven-project'
+}
+}
 }

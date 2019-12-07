@@ -5,7 +5,10 @@ stages
 {
 stage ('cloning code')
 {
+steps
+{
 git 'https://github.com/shaileejain09/maven-project'
+}
 }
 }
 }

@@ -1,0 +1,9 @@
+stage ('compile my project')
+{
+steps
+{
+withMaven(jdk: 'JAVA', maven: 'maven tool') {
+    sh 'mvn compile'
+}
+}
+}

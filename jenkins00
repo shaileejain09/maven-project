@@ -15,7 +15,7 @@ stage ('compile my project')
 steps
 }
 withMaven(jdk: 'JAVA', maven: 'maven tool') {
-    // some block
+    sh 'mvn compile'
 }
 }
 } 

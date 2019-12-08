@@ -20,7 +20,7 @@ withMaven(jdk: 'JAVA', maven: 'maven tool') {
 stage{
 steps{
 sshagent (['tomcatnew']) {
-    sh 'scp -o StrictHostKeyChecking=no */target/*.war ec2-user@3.113.19.253:/var/lib/tomcat/webapps/'
+    sh 'scp -o StrictHostKeyChecking=no */target/*.war ec2-user@172.31.39.149:/var/lib/tomcat/webapps/'
   }
 }
 }

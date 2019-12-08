@@ -10,7 +10,7 @@ steps
 git 'https://github.com/shaileejain09/maven-project'
 }
 }
-stage ('compile my project')
+stage ('test my project')
 {
 steps
 {

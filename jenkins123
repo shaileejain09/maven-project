@@ -15,7 +15,16 @@ stage ('test my project')
 steps
 {
 withMaven(jdk: 'JAVA', maven: 'maven tool') {
-    sh 'mvn compile'
+    sh 'mvn install'
+}
+stage{
+steps{
+sshagent (['tomcatnew']) {
+    sh 'scp -o StrictHostKeyChecking=no */target/*.war ec2-user@3.113.19.253:/var/lib/tomcat/webapps/'
+  }
 }
 }
-}}}
+    
+}
+}
+}}

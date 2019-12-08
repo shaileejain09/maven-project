@@ -17,6 +17,8 @@ steps
 withMaven(jdk: 'JAVA', maven: 'maven tool') {
     sh 'mvn install'
 }
+}
+}
 stage{
 steps{
 sshagent (['tomcatnew']) {
@@ -24,7 +26,5 @@ sshagent (['tomcatnew']) {
   }
 }
 }
-    
 }
 }
-}}
